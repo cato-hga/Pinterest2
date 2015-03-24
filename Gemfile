@@ -28,6 +28,14 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'kaminari', '~> 0.16.3'
 
+gem 'carrierwave'
+
+gem "mini_magick"
+
+gem 'fog'
+
+gem 'faker', '~> 1.4.3'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
@@ -45,4 +53,6 @@ group :development, :test do
   gem 'spring'
 
   gem 'annotate', '~> 2.6.8'
+
+  gem 'dotenv-rails'
 end

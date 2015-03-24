@@ -21,7 +21,7 @@
         <td><%= pin.description %></td>
         <td><%= pin.board %></td>
         <td><%= pin.url %></td>
-        <td><%= pin.pin_image %></td>
+        <td><%= image_tag(pin.pin_image) %></td>
         <td><%= link_to 'Show', pin %></td>
         <td><%= link_to 'Edit', edit_pin_path(pin) %></td>
         <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>

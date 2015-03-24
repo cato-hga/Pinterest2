@@ -15,4 +15,7 @@ class User < ActiveRecord::Base
   has_many :pins, through: :boards
 
   validates :name, presence: true
+
+  mount_uploader :avatar, AvatarUploader
+
 end

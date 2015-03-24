@@ -22,6 +22,10 @@ class Pin < ActiveRecord::Base
   #VALIDATIONS
   validates :title, presence: true
   validates :description, presence: true
-  validates :url, presence: true
-  validates :pin_image, presence: true
+  #validates :url, presence: true
+  #validates :pin_image, presence: true
+
+  mount_uploader :pin_image, PinImageUploader
+
+
 end
