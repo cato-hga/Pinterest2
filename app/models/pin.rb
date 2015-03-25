@@ -5,7 +5,6 @@
 #  id          :integer          not null, primary key
 #  title       :string
 #  description :text
-#  board       :string
 #  url         :string
 #  pin_image   :string
 #  created_at  :datetime         not null
@@ -22,8 +21,8 @@ class Pin < ActiveRecord::Base
   #VALIDATIONS
   validates :title, presence: true
   validates :description, presence: true
-  #validates :url, presence: true
-  #validates :pin_image, presence: true
+  validates :url, presence: true
+  validates :pin_image, presence: true
 
   mount_uploader :pin_image, PinImageUploader
 

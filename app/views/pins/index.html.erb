@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Pins</h1>
+<h1 id="specialh1">Listing Pins</h1>
 
 <table>
   <thead>
@@ -19,7 +19,7 @@
       <tr>
         <td><%= pin.title %></td>
         <td><%= pin.description %></td>
-        <td><%= pin.board %></td>
+        <td><%= pin.board.name %></td>
         <td><%= pin.url %></td>
         <td><%= image_tag(pin.pin_image) %></td>
         <td><%= link_to 'Show', pin %></td>
@@ -31,5 +31,5 @@
 </table>
 
 <br>
-
+<%= paginate @pins %>
 <%= link_to 'New Pin', new_pin_path %>

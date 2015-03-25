@@ -16,9 +16,8 @@ class PinImageUploader < CarrierWave::Uploader::Base
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
-  process :resize_to_limit => [750, -1]
-  version :pin do
-  process :resize_to_fit => [236, -1]
+  version :pin_image do
+  process :resize_to_fit => [80, 80]
   end
 
     def extension_white_list

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150324180746) do
+ActiveRecord::Schema.define(version: 20150324230145) do
 
   create_table "boards", force: :cascade do |t|
     t.string   "name"
@@ -25,7 +25,6 @@ ActiveRecord::Schema.define(version: 20150324180746) do
   create_table "pins", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
-    t.string   "board"
     t.string   "url"
     t.string   "pin_image"
     t.datetime "created_at",  null: false

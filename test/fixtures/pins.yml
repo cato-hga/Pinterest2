@@ -5,7 +5,6 @@
 #  id          :integer          not null, primary key
 #  title       :string
 #  description :text
-#  board       :string
 #  url         :string
 #  pin_image   :string
 #  created_at  :datetime         not null
