@@ -14,9 +14,9 @@ Pin.destroy_all
 
 
 
-5.times do
+1.times do
 
-  user = User.create!(name: Faker::Name.name,
+  user = User.create!(name: "Guest",
   email: Faker::Internet.email,
   remote_avatar_url: Faker::Avatar.image)
 
@@ -30,8 +30,8 @@ Pin.destroy_all
       pin = Pin.create!(title: Faker::Name.title,
       description: Faker::Hacker.say_something_smart,
       board: board, user:user,
-      url: Faker::Internet.url('lorempixel.com/80/80/sports'),
-      remote_pin_image_url: "http://lorempixel.com/80/80/sports/")
+      url: Faker::Internet.url('lorempixel.com/100/100/sports'),
+      remote_pin_image_url: "http://lorempixel.com/100/100/sports/")
 
     end
   end

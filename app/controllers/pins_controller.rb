@@ -4,7 +4,7 @@ class PinsController < ApplicationController
   # GET /pins
   # GET /pins.json
   def index
-    @pins = Pin.all.page(params[:page]).per(7)
+    @pins = Pin.all.page(params[:page]).per(25)
   end
 
   # GET /pins/1

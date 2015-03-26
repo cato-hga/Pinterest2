@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20150324230145) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "boards", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
@@ -20,7 +23,7 @@ ActiveRecord::Schema.define(version: 20150324230145) do
     t.integer  "user_id"
   end
 
-  add_index "boards", ["user_id"], name: "index_boards_on_user_id"
+  add_index "boards", ["user_id"], name: "index_boards_on_user_id", using: :btree
 
   create_table "pins", force: :cascade do |t|
     t.string   "title"
@@ -33,8 +36,8 @@ ActiveRecord::Schema.define(version: 20150324230145) do
     t.integer  "board_id"
   end
 
-  add_index "pins", ["board_id"], name: "index_pins_on_board_id"
-  add_index "pins", ["user_id"], name: "index_pins_on_user_id"
+  add_index "pins", ["board_id"], name: "index_pins_on_board_id", using: :btree
+  add_index "pins", ["user_id"], name: "index_pins_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
@@ -44,4 +47,7 @@ ActiveRecord::Schema.define(version: 20150324230145) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "boards", "users"
+  add_foreign_key "pins", "boards"
+  add_foreign_key "pins", "users"
 end

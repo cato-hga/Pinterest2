@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1 id="specialh1">Listing Pins</h1>
+<h1><center>Listing <%= @current_user.name %> Pins</center></h1>
 
 <table>
   <thead>
@@ -29,7 +29,8 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
 <%= paginate @pins %>
-<%= link_to 'New Pin', new_pin_path %>
+<div class="font">
+  <button type="button" class="btn btn-default"><%= link_to 'New Pin', new_pin_path %></button><br><br>
+  <button type="button" class="btn btn-default"><%= link_to 'Back to Home Page', root_path %></button><br><br>
+</div>
