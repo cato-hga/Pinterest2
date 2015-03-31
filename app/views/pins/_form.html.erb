@@ -20,8 +20,8 @@
     <%= f.text_area :description %>
   </div>
   <div class="field">
-    <%= f.label :board %><br>
-    <%= f.text_field :board %>
+    Pick a board:
+    <%= f.select :board_id, @select_boards, {include_blank: ''} %>
   </div>
   <div class="field">
     <%= f.label :url %><br>

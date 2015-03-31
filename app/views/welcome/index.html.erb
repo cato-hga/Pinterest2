@@ -1,7 +1,7 @@
 
 
 <div class="container">
-  <center><h1>Welcome to Pinterest!</h1></center>
+  <center><h1 id="special">Welcome to Pinterest,<%= current_user.name %>!</h1></center>
   <% @pins.each do |p| %>
       <div class="col-md-3">
         <div id="pin">
@@ -17,8 +17,8 @@
 
 
 <div class="font">
-  <button type="button" class="btn btn-default"><%= link_to "My Boards", boards_path %></button><br><br>
+  <button type="button" class="btn btn-default"><%= link_to "My Boards", boards_path %></button>
   <button type="button" class="btn btn-default"><%= link_to "Create a Board", new_board_path %></button><br><br>
-  <button class="btn btn-default" type="submit"><%= link_to "My Pins", pins_path %></button><br><br>
+  <button class="btn btn-default" type="submit"><%= link_to "My Pins", pins_path %></button>
   <button class="btn btn-default" type="submit"><%= link_to "Create a Pin", new_pin_path %></button><br><br>
 </div

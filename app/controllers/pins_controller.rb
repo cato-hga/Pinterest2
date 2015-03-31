@@ -1,10 +1,11 @@
 class PinsController < ApplicationController
   before_action :set_pin, only: [:show, :edit, :update, :destroy]
+  before_action :select_boards
 
   # GET /pins
   # GET /pins.json
   def index
-    @pins = Pin.all.page(params[:page]).per(25)
+    @pins = Pin.all.page(params[:page]).per(5)
   end
 
   # GET /pins/1
@@ -59,6 +60,10 @@ class PinsController < ApplicationController
       format.html { redirect_to pins_url, notice: 'Pin was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def select_boards
+    @select_boards = current_user.boards.all.collect { |b| [b.name, b.id] } if current_user
   end
 
   private

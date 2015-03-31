@@ -1,5 +1,6 @@
 class BoardsController < ApplicationController
   before_action :set_board, only: [:show, :edit, :update, :destroy]
+  before_action :select_users
 
   # GET /boards
   # GET /boards.json
@@ -20,6 +21,7 @@ class BoardsController < ApplicationController
   # GET /boards/1/edit
   def edit
   end
+
 
   # POST /boards
   # POST /boards.json
@@ -59,6 +61,10 @@ class BoardsController < ApplicationController
       format.html { redirect_to boards_url, notice: 'Board was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def select_users
+    @select_users = User.all.collect { |b| [b.name, b.id] } if current_user
   end
 
   private

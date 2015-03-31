@@ -25,6 +25,6 @@
   <%= image_tag(@pin.pin_image) %>
 </p>
 <div class="font">
-<%= link_to 'Edit', edit_pin_path(@pin) %> |
-<%= link_to 'Back/show', pins_path %>
+<button type="button" class="btn btn-default"><%= link_to 'Edit', edit_pin_path(@pin) %></button>
+<button type="button" class="btn btn-default"><%= link_to 'Back', pins_path %></button>
 </div>

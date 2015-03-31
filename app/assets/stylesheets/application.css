@@ -14,8 +14,12 @@
  *= require_self
  */
 
+ body {
+   background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuWbIr7H53arjPYsG_bDuBMulj-MlO8IK-QfI656Q1b5_flvnHTA);
+ }
+
  .font {
-   font-family: 'Playfair Display SC', serif; 
+   font-family: 'Playfair Display SC', serif;
  }
 
 

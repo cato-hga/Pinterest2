@@ -1,8 +1,16 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Name of Board:</strong>
   <%= @board.name %>
+</p>
+
+<p>
+  <strong>Pins:</strong>
+  <% @board.pins.each do |pin| %>
+    <%= pin.title %>            
+  <% end %>
+
 </p>
 
 <%= link_to 'Edit', edit_board_path(@board) %> |
