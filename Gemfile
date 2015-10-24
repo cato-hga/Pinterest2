@@ -27,6 +27,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'kaminari', '~> 0.16.3'
 
+gem 'thin'
+
+gem 'pg'
+
 gem 'carrierwave'
 
 gem "mini_magick"
@@ -56,16 +60,15 @@ group :development, :test do
 
   gem 'dotenv-rails'
 
-  #gem 'thin'
 
 
-
+end
 
 
   group :production do
     gem 'rails_12factor'
 
-    gem 'pg'
+
 
 end
-end
+
