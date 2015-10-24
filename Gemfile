@@ -56,7 +56,7 @@ group :development, :test do
 
   gem 'dotenv-rails'
 
-  gem 'thin'
+  #gem 'thin'
 
 
 
