@@ -56,8 +56,11 @@ group :development, :test do
 
   gem 'dotenv-rails'
 
+  gem 'thin'
 
-group :production do
+
+
+  group :production do
     gem 'rails_12factor'
     gem 'pg'
     gem 'thin'
