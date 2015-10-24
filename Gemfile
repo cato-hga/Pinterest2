@@ -58,12 +58,14 @@ group :development, :test do
 
   gem 'thin'
 
+  gem 'pg'
+
 
 
   group :production do
     gem 'rails_12factor'
-    gem 'pg'
-    gem 'thin'
+
+
 
 end
 end
